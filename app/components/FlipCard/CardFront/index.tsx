@@ -51,7 +51,13 @@ const numList = [
   "Q",
   "K",
 ];
-const decorList = [null, <Spade />, <Heart />, <Club />, <Diamond />];
+const decorList = [
+  null,
+  <Spade key="spade" />,
+  <Heart key="heart" />,
+  <Club key="club" />,
+  <Diamond key="diamond" />,
+];
 const Card: React.FC<CardProps> = ({ num, decorType }) => {
   return (
     <CardFront>
