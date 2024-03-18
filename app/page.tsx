@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
+import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import FlipCard from "./components/FlipCard/Single";
@@ -7,9 +7,9 @@ import "./index.css";
 import { sans } from "./style/fonts";
 
 const Home: React.FC = () => {
-  useEffect(() => {
-    document.documentElement.classList.add("dark");
-  }, []);
+  // useEffect(() => {
+  //   document.documentElement.classList.add("dark");
+  // }, []);
   return (
     <main>
       <section className="h-screen bg-white flex flex-col justify-center items-center dark:bg-black">

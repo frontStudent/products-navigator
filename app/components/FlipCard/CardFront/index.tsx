@@ -35,28 +35,32 @@ interface CardProps {
   decorType: number;
 }
 
-const numMap = {
-  1: "A",
-  11: "J",
-  12: "Q",
-  13: "K",
-};
-
-const decorMap = {
-  1: <Spade />,
-  2: <Heart />,
-  3: <Club />,
-  4: <Diamond />,
-};
+const numList = [
+  "0",
+  "A",
+  "2",
+  "3",
+  "4",
+  "5",
+  "6",
+  "7",
+  "8",
+  "9",
+  "10",
+  "J",
+  "Q",
+  "K",
+];
+const decorList = [null, <Spade />, <Heart />, <Club />, <Diamond />];
 const Card: React.FC<CardProps> = ({ num, decorType }) => {
   return (
     <CardFront>
       <Digit>
-        {Object.keys(numMap).includes(String(num)) ? numMap[num] : num}
+        {Object.keys(numList).includes(String(num)) ? numList[num] : num}
       </Digit>
-      {decorMap[decorType]}
+      {decorList[decorType]}
       <BottomDigit>
-        {Object.keys(numMap).includes(String(num)) ? numMap[num] : num}
+        {Object.keys(numList).includes(String(num)) ? numList[num] : num}
       </BottomDigit>
     </CardFront>
   );
