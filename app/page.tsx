@@ -2,7 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import FlipCard from "./components/FlipCard/Single";
+// import FlipCard from "./components/FlipCard/Single";
 import "./index.css";
 import { sans } from "./style/fonts";
 
@@ -73,7 +73,7 @@ const Home: React.FC = () => {
           </div>
         </div>
       </section>
-      <section className="h-screen bg-white flex flex-col justify-center items-center dark:bg-black">
+      {/* <section className="h-screen bg-white flex flex-col justify-center items-center dark:bg-black">
         <div className=" w-3/5 lg:flex flex-row justify-center items-center">
           <motion.div
             initial={{ opacity: 0 }}
@@ -138,7 +138,7 @@ const Home: React.FC = () => {
             </p>
           </div>
         </div>
-      </section>
+      </section> */}
     </main>
   );
 };
