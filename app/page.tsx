@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import FlipCard from "./components/FlipCard/Single";
 import "./index.css";
 import { sans } from "./style/fonts";
+import NextSvg from '../public/NEXT.svg'
 
 const Home: React.FC = () => {
   // useEffect(() => {
@@ -35,7 +36,7 @@ const Home: React.FC = () => {
           </motion.div>
           <div className="relative h-50 flex-1 ml-10 lg:block hidden">
             <Image
-              src="/NEXT.svg"
+              src={NextSvg}
               className="absolute top-10 left-0"
               alt=""
               width={350}
