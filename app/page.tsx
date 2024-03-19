@@ -5,8 +5,7 @@ import { motion } from "framer-motion";
 import FlipCard from "./components/FlipCard/Single";
 import "./index.css";
 import { sans } from "./style/fonts";
-import NextSvg from './NEXT.svg'
-
+import NextSvg from "./NEXT.svg";
 const Home: React.FC = () => {
   // useEffect(() => {
   //   document.documentElement.classList.add("dark");
@@ -14,6 +13,13 @@ const Home: React.FC = () => {
   return (
     <main>
       <section className="h-screen bg-white flex flex-col justify-center items-center dark:bg-black">
+        <div className="text-xl text-slate-800 fixed top-5 left-10 hover:text-purple-700 cursor-pointer">
+        <div className={sans.className}>FRONT NEVER END</div>
+        </div>
+        <div className="text-md text-slate-600 fixed top-3 right-10 hover:text-purple-700 cursor-pointer">
+          github
+        </div>
+        
         <div className=" w-3/5 lg:flex flex-row justify-center items-center">
           <motion.div
             initial={{ opacity: 0 }}
@@ -37,9 +43,9 @@ const Home: React.FC = () => {
           <div className="relative h-50 flex-1 ml-10 lg:block hidden">
             <Image
               src={NextSvg}
-              className="absolute top-6 left-0"
+              className="absolute top-14 left-0"
               alt=""
-              width={280}
+              width={350}
               height={80}
               priority
             />
@@ -47,31 +53,35 @@ const Home: React.FC = () => {
           </div>
         </div>
 
-        <div className=" w-2/3 lg:flex flex-row justify-center items-center lg:my-10">
+        <div className=" w-2/3 lg:flex flex-row my-5">
           <div className="bg-white dark:bg-slate-800 rounded-lg p-6 m-6 ring-1 ring-slate-900/5 shadow-xl">
             <h3 className="text-slate-900 dark:text-white text-base font-medium tracking-tight">
-              Next.js + Tailwind CSS
+              Technology
             </h3>
             <p className="text-slate-500 dark:text-slate-400 mt-2 text-sm">
-              The Zero Gravity Pen can be used to write in any orientation
+              此导航站点使用 Next.js + Tailwind CSS + Framer Motion
+              技术栈开发，并在Vercel上进行站点部署
             </p>
           </div>
-          <div className="bg-white dark:bg-slate-800 rounded-lg p-6 m-6 my-8 ring-1 ring-slate-900/5 shadow-xl">
+          <div className="bg-white dark:bg-slate-800 rounded-lg p-6 m-6 ring-1 ring-slate-900/5 shadow-xl">
             <h3 className="text-slate-900 dark:text-white text-base font-medium tracking-tight">
-              Writes Upside-Down
+              Content
             </h3>
             <p className="text-slate-500 dark:text-slate-400 mt-2 text-sm">
-              The Zero Gravity Pen can be used to write in any orientation
+              此导航站点将简要介绍个人开发的小工具、文档笔记站点以及全栈项目等，并提供对应的掘金文章、npm以及github的链接地址
             </p>
           </div>
-          <div className="bg-white dark:bg-slate-800 rounded-lg p-6 m-6 my-8 ring-1 ring-slate-900/5 shadow-xl">
+          <div className="bg-white dark:bg-slate-800 rounded-lg p-6 m-6 ring-1 ring-slate-900/5 shadow-xl">
             <h3 className="text-slate-900 dark:text-white text-base font-medium tracking-tight">
-              Writes Upside-Down
+              Key Points
             </h3>
             <p className="text-slate-500 dark:text-slate-400 mt-2 text-sm">
-              The Zero Gravity Pen can be used to write in any orientation
+              此导航站点针对不同屏幕宽度进行了内容适配，并且支持Light与Dark模式的一键换肤功能
             </p>
           </div>
+        </div>
+        <div className="text-xl my-5 text-slate-600 fixed bottom-4">
+          <div className={sans.className}>--- Scroll to view more ---</div>
         </div>
       </section>
       <section className="h-screen bg-white flex flex-col justify-center items-center dark:bg-black">
@@ -116,17 +126,7 @@ const Home: React.FC = () => {
               Origin
             </h3>
             <p className="text-slate-500 dark:text-slate-400 mt-2 text-sm">
-              The Zero Gravity Pen can be used to write in any orientation,
-              including upside-down. It even works in outer space.
-            </p>
-          </div>
-          <div className="bg-white dark:bg-slate-800 rounded-lg px-6 py-8 mx-6 ring-1 ring-slate-900/5 shadow-xl">
-            <h3 className="text-slate-900 dark:text-white mt-5 text-base font-medium tracking-tight">
-              Technology
-            </h3>
-            <p className="text-slate-500 dark:text-slate-400 mt-2 text-sm">
-              The Zero Gravity Pen can be used to write in any orientation,
-              including upside-down. It even works in outer space.
+              通过随机抽三张扑克的方法，根据其组合结果来测试今日运势
             </p>
           </div>
           <div className="bg-white dark:bg-slate-800 rounded-lg px-6 py-8 mx-6 ring-1 ring-slate-900/5 shadow-xl">
@@ -134,8 +134,15 @@ const Home: React.FC = () => {
               Rules
             </h3>
             <p className="text-slate-500 dark:text-slate-400 mt-2 text-sm">
-              The Zero Gravity Pen can be used to write in any orientation,
-              including upside-down. It even works in outer space.
+              （豹子）三张牌点数相同 大于 同花顺 大于 同花 大于 顺子 大于 一对 大于 散牌
+            </p>
+          </div>
+          <div className="bg-white dark:bg-slate-800 rounded-lg px-6 py-8 mx-6 ring-1 ring-slate-900/5 shadow-xl">
+            <h3 className="text-slate-900 dark:text-white mt-5 text-base font-medium tracking-tight">
+              Technology
+            </h3>
+            <p className="text-slate-500 dark:text-slate-400 mt-2 text-sm">
+              难点在于卡片翻转的动画效果，主要通过transform属性的perspective与rotateY来实现
             </p>
           </div>
         </div>
