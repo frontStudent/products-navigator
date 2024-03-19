@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import FlipCard from "./components/FlipCard/Single";
 import "./index.css";
 import { sans } from "./style/fonts";
-import NextSvg from './site.png'
+import NextSvg from './NEXT.svg'
 
 const Home: React.FC = () => {
   // useEffect(() => {
